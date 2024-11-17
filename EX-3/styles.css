@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  .my {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .card {
+    width: auto;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card img {
+    width: 100%;
+    border-radius: 4px;
+  }
+  
+  h2 {
+    width: inherit;
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+  
+  p {
+    width: inherit; 
+    font-size: 1rem;
+    color: #555;
+  }
+
+  /* 
+    without setting the width of p and h2 as inherit, media rule does not works.
+    That is because, by default, the width of a div is the with of its content.
+    So without specifying the width of h2 and p, each cell will have a width 
+    of the whole view width (default width of a block element).
+  */
+
+@media (601px <= width <=1024px) {
+  .my {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+@media (1025px <= width) {
+  .my {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+}
