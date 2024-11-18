@@ -14,18 +14,19 @@ ul {
 
 body {
     padding: 1%;
-    background: linear-gradient(315deg, hsla(216, 23%, 30%, 1) 0%, hsla(13, 64%, 26%, 1) 100%);
+    background: linear-gradient(315deg, rgb(33, 42, 54) 0%, rgb(72, 29, 17) 100%);
 }
 
 .dashboard-container {
     margin: 0 auto;
     width: 80vw;
-    height: 100vh;
+    height: auto;
     display: grid;
     gap: 10px;
-    padding: 15px;
+    
    
     grid-template-columns: 1fr;
+    background-color: rgb(42, 42, 42);
 }
 
 .glass-look {
@@ -40,17 +41,17 @@ body {
     grid-template-columns: 1fr 1fr;
 }
 .profile { 
+    
     padding: 10px;
     display: grid;
-    grid-template-columns: 150px auto;
+    grid-template-columns: auto min-content;
     gap: 10px;
     align-items: center;
 }
 
 .profile h2{ 
     font-size: 2.5rem;
-    height: fit-content;
-    width: fit-content;
+    
 }
 
 .profile img {
@@ -224,3 +225,67 @@ span[class="loss"] {
 
 /* end of performance info */
 
+
+@media (width < 800px) {
+    h1 {
+        padding: 10px;
+    }
+    .player-info-container {
+        
+        padding: 10px;
+        width: inherit;
+        grid-template-columns: 1fr;
+    }
+    .profile {   
+        align-items: center;
+        justify-content: start;
+        gap: 0px; 
+    }
+
+    .profile p {
+        width: max-content;
+    }
+
+    .profile h2 {
+        font-size: 1.5rem;
+    }
+    .profile img {
+        width: 50px;
+        height: 50px
+    }
+
+    .player-stats {
+        justify-content: start;
+    }
+
+    .player-stats ul {
+        font-size: 1rem;
+    }
+
+    .player-stats ul li {
+        padding: 0px 5px;
+    }
+
+    .gameplay-info-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-container  {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 40px;
+    }
+
+    .performance-card-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (800px <= width <= 1024px) {
+    .player-stats li {
+        font-size: 1rem;
+    }
+    .hero-container  {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 40px;
+    }
+}
