@@ -1,0 +1,193 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: rgb(225, 218, 218);
+}
+
+ul {
+    list-style-type: none;
+}
+
+body {
+    padding: 1%;
+    background: linear-gradient(315deg, rgb(33, 42, 54) 0%, rgb(72, 29, 17) 100%);
+}
+
+.dashboard-container {
+    margin: 0 auto;
+    width: 80vw;
+    height: auto;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    background-color: rgb(42, 42, 42);
+}
+
+.glass-look {
+    box-shadow: inset 0 0 15px rgba(135, 135, 135, .1), 0 0 18px 3px rgba(0, 0, 0, .3);
+    border-radius: 10px;
+}
+
+h1 {
+    padding: 10px;
+}
+
+.player-info-container {
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.profile {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: min-content auto;
+    gap: 10px;
+}
+
+.profile img {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(88, 88, 88, 0.602);
+}
+
+.player-stats {
+    padding: 10px;
+}
+
+.gameplay-info-container {
+    margin: 0 10px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.recent-matches {
+    padding: 10px;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 10px;
+}
+
+.match-container {
+    margin: 0 auto;
+    width: 100%;
+}
+.match {
+    font-size: 0.8rem;
+    width: 100%;
+    padding: 5px 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    justify-content: center;
+    border-bottom: 1px solid rgb(189, 186, 182);
+}
+div[class="match"]:last-of-type {
+    border: none;
+}
+
+span[class="win"] {
+    color: lime;
+}
+span[class="loss"] {
+    color: red;
+}
+
+
+
+.favorite-heroes {
+    padding: 10px;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 10px;
+}
+
+.hero-container {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    row-gap: 40px;
+}
+
+.hero-stats {
+    position: relative;
+    padding: 10px;
+}
+
+.hero-stats img {
+    position: absolute;
+    top: -25px;
+    right: 4%;
+    width: 50px;
+}
+
+.hero-stats h3{
+    font-size: 1rem;
+}
+
+.hero-stats-text {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+}
+
+.gameplay-info-container a{
+    font-size: 0.9rem;
+    display: block;
+    text-align: right;
+    text-decoration: none;
+    color:rgb(185, 185, 185)
+}
+
+.gameplay-info-container a:hover {
+    text-decoration: underline;
+}
+
+.performance-container {
+    padding: 10px;
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 10px;
+}
+
+.performance-card-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin: 10px 5px;
+}
+
+.performance-card {
+    padding: 10px;
+}
+
+.performance-card ul {
+    margin-top: 5px;
+    padding-left: 10px;
+}
+
+@media (width > 800px) {
+    .gameplay-info-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    .match {
+        font-size: 0.9rem;
+        gap: 10px;
+        padding: 15px 5px;
+    }
+
+    .recent-matches a {
+        align-self: end;
+    }
+
+    .performance-card-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
